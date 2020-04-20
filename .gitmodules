@@ -1,0 +1,8 @@
+[submodule "college-timetable-frontend"]
+	path = college-timetable-frontend
+	url = https://github.com/andreycj/college-timetable-frontend
+	branch = master
+[submodule "college-timetable-backend"]
+	path = college-timetable-backend
+	url = https://github.com/andreycj/college-timetable-frontend
+	branch = master
