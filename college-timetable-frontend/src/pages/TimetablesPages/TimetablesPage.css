@@ -1,0 +1,239 @@
+table {
+    border-collapse: collapse;
+    letter-spacing: 1px;
+    font-size: 0.8rem;
+    width: 100%;
+    table-layout: fixed ;
+    flex: 1;
+    align-self: stretch;
+    height: 100%;
+}
+
+td, th {
+    padding: 8px;
+    border-top: none ;
+    border: 1px solid #d8d8d8;
+    background: #fff;
+    letter-spacing: 0.5px !important;
+}
+
+th {
+    border-top: none;
+    height: 30px;
+    padding: 0;
+    background: #F8F8F8;
+    font-weight: 300;   
+}
+
+td {
+    text-align: center;
+    /* box-shadow:0 2.8px 2.2px rgba(0, 0, 0, 0.034), 0 6.7px 5.3px rgba(0, 0, 0, 0.048); */
+}
+
+
+tbody tr td {
+    height: 80px !important ;
+}
+
+.timetables-page {
+    height: 100%;
+}
+
+.timetables-page__wrapper {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    height: 100%;
+    max-height: 100%;
+    overflow: hidden;
+}
+
+.number {
+    padding: 0 !important;
+    margin: 0;
+    width: 30px;
+    background: #F8F8F8;
+    font-weight: 300;
+}
+
+.fake-col-num {
+    width: 30px;
+    background: #f8f8f8;
+}
+
+.fake-col {
+    z-index: -1;
+    border-bottom: none !important;
+}
+
+.fake-row {
+    height: 100% !important;
+}
+
+.timetables-page__lesson {
+    padding: 0 8px;
+    background: rgb(250, 250, 250);
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    border-radius: .5em;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    color: #333333;
+}
+
+.timetables-page__lesson-wrapper {
+  line-height: 1.7;
+}
+
+.loading-wrapper {
+  align-items: center;
+  justify-content: center;
+}
+
+.timetables-page__lesson:hover {
+    background: #ececec;
+}
+
+.lds-roller {
+  display: inline-block;
+  position: relative;
+  width: 80px;
+  height: 80px;
+}
+.lds-roller div {
+  animation: lds-roller 1.2s cubic-bezier(0.5, 0, 0.5, 1) infinite;
+  transform-origin: 40px 40px;
+}
+.lds-roller div:after {
+  content: " ";
+  display: block;
+  position: absolute;
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: #555555;
+  margin: -4px 0 0 -4px;
+}
+.lds-roller div:nth-child(1) {
+  animation-delay: -0.036s;
+}
+.lds-roller div:nth-child(1):after {
+  top: 63px;
+  left: 63px;
+}
+.lds-roller div:nth-child(2) {
+  animation-delay: -0.072s;
+}
+.lds-roller div:nth-child(2):after {
+  top: 68px;
+  left: 56px;
+}
+.lds-roller div:nth-child(3) {
+  animation-delay: -0.108s;
+}
+.lds-roller div:nth-child(3):after {
+  top: 71px;
+  left: 48px;
+}
+.lds-roller div:nth-child(4) {
+  animation-delay: -0.144s;
+}
+.lds-roller div:nth-child(4):after {
+  top: 72px;
+  left: 40px;
+}
+.lds-roller div:nth-child(5) {
+  animation-delay: -0.18s;
+}
+.lds-roller div:nth-child(5):after {
+  top: 71px;
+  left: 32px;
+}
+.lds-roller div:nth-child(6) {
+  animation-delay: -0.216s;
+}
+.lds-roller div:nth-child(6):after {
+  top: 68px;
+  left: 24px;
+}
+.lds-roller div:nth-child(7) {
+  animation-delay: -0.252s;
+}
+.lds-roller div:nth-child(7):after {
+  top: 63px;
+  left: 17px;
+}
+.lds-roller div:nth-child(8) {
+  animation-delay: -0.288s;
+}
+.lds-roller div:nth-child(8):after {
+  top: 56px;
+  left: 12px;
+}
+@keyframes lds-roller {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@media (max-width: 768px) {
+    table {
+      
+      display: block;
+      overflow-x: auto;
+      white-space: nowrap;
+      width: 100%;
+    }
+
+    tr {
+      height: 100%;
+    }
+
+    tr td:nth-child(2) {
+      min-width: calc(100vw - 20px) !important;
+    }
+
+    .timetables-page__lesson-wrapper {
+      word-wrap: break-word;
+      white-space: normal;
+      height: 100%;
+      min-width: 100vw;
+    }
+
+    .timetables-page__lesson {
+      /* word-wrap: break-word; */
+      overflow-wrap: break-word;
+    }
+
+    .sidebar-wrapper {
+      display: none;
+    }
+
+    .page-title {
+      display: none;
+    }
+
+    .number {
+      min-width: 20px !important;
+      font-size: 0.7rem
+    }
+
+    .fake-row {
+      display: none;
+    }
+}
+
+/* @media (max-width: 425px) {
+
+  td, th {
+    min-width: 100vw;
+  }
+
+} */

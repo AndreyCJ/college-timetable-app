@@ -1,0 +1,168 @@
+.header {
+    background: #F7C942;
+    width: 100%;
+    height: 55px;
+    display: flex;
+    align-items: center;
+    color: #333333;
+    font-size: 0.9rem;
+}
+
+.header-wrapper {
+    width: 100%;
+    padding-left: 30px;
+    padding-right: 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header-tooltip {
+    display: flex;
+    justify-content: center;
+    align-items:center;
+}
+
+.header-tooltip-group-wrapper {
+    display: flex;
+}
+
+.select-wrapper {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 55px;
+    cursor: pointer;
+    outline: none;
+}
+
+.select-wrapper:hover {
+    background: rgb(255, 215, 93);
+}
+
+.header ul {
+    width: 100%;
+    list-style: none;
+    position: absolute;
+    top: 55px;
+    left: 0;
+    background: #f8f8f8;
+    font-size: 0.9rem;
+    display: block;
+    transition: opacity 100ms linear, top 100ms linear, visibility 100ms linear;
+    box-shadow: 0 1px 3px rgba(0,0,0,.1);
+}
+
+.header-week, .header-tooltip-group {
+    visibility: hidden;
+    opacity: 0;
+    font-size: 0.8rem !important;
+}
+
+.header ul li {
+    white-space: nowrap;
+    width: 100%;
+    position: relative;
+    padding: 10px 10px;
+    cursor: pointer;
+}
+
+.header ul li:hover {
+    background: #f1f1f1;
+}
+
+.page-title {
+    font-weight: 600;
+}
+
+.header-tooltip__button {
+    background: transparent;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    height: 55px;
+    padding: 0 15px;
+}
+
+.header-tooltip__button:hover {
+    background: rgb(255, 215, 93);
+}
+
+.sidebar-logo img{
+    width: 40px;
+}
+
+.--ul-label {
+    position: relative;
+    width: 100%;
+    cursor: pointer;
+    padding: 0 15px;
+    -webkit-touch-callout: none; /* iOS Safari */
+    -webkit-user-select: none; /* Safari */
+    -khtml-user-select: none; /* Konqueror HTML */
+    -moz-user-select: none; /* Firefox */
+    -ms-user-select: none; /* Internet Explorer/Edge */
+    user-select: none; /* Non-prefixed version, currentl */
+    font-size: 0.8rem;
+}
+
+.--ul-label svg{
+    margin-left: 5px;
+    font-size: 0.7rem;
+}
+
+.--clicked {
+    background: rgb(255, 215, 93);
+}
+
+.--shown {
+    visibility: visible;
+    opacity: 1;
+}
+
+.--selection svg {
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* select {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    -ms-appearance: none;
+    appearance: none;
+    outline: 0;
+    box-shadow: none;
+    border: 0 !important;
+    background: transparent;
+    cursor: pointer;
+    width: 100%;
+    font-size: 0.9rem;
+    padding: 0 .5em;
+    flex: 1;
+    height: 100%;
+} */
+
+/* .select-wrapper::after {
+    content: '\25BC';
+    position: absolute;
+    right: 0;
+    font-size: 0.5rem;
+    text-align: center;
+    cursor: pointer;
+    pointer-events: none;
+    -webkit-transition: .25s all ease;
+    -o-transition: .25s all ease;
+    transition: .25s all ease;
+    opacity: .5;
+}
+
+.select-wrapper:hover::after {
+    color: #f1f1f1; 
+} */
+
+/* select::-ms-expand {
+    display: none;
+} */

@@ -1,0 +1,14 @@
+{
+  "name": "college-timetable-app",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev": "concurrently \"cd college-timetable-backend && npm run dev\" \"cd college-timetable-frontend && npm start\" "
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "concurrently": "^5.1.0"
+  }
+}
