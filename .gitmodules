@@ -1,0 +1,3 @@
+[submodule "college-timetable-backend"]
+	path = college-timetable-backend
+	url = https://github.com/andreycj/college-timetable-backend
