@@ -1,0 +1,36 @@
+{
+  "name": "college-timetable-backend",
+  "version": "1.0.0",
+  "description": "MERN app backend",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest",
+    "installClient": "npm start --prefix ../college-timetable-frontend",
+    "start": "node index.js",
+    "dev": "nodemon indexs.js",
+    "lint": "eslint",
+    "heroku-postbuild": "NPM_CONFIG_PRODUCTION=false npm install --prefix ../college-timetable-frontend && npm run build --prefix ../college-timetable-frontend"
+  },
+  "author": "Andrey Chebotar <andreyoneup@gmail.com>",
+  "license": "ISC",
+  "dependencies": {
+    "admin-bro": "^2.2.5",
+    "admin-bro-expressjs": "^2.0.4",
+    "admin-bro-mongoose": "^0.4.2",
+    "body-parser": "^1.19.0",
+    "config": "^3.3.1",
+    "cookie-parser": "^1.4.5",
+    "cors": "^2.8.5",
+    "express": "^4.17.1",
+    "express-formidable": "^1.2.0",
+    "express-session": "^1.17.1",
+    "mongoose": "^5.9.9",
+    "validator": "^13.0.0"
+  },
+  "devDependencies": {
+    "eslint": "^6.8.0",
+    "eslint-config-airbnb-base": "^14.1.0",
+    "eslint-plugin-import": "^2.20.2",
+    "nodemon": "^2.0.3"
+  }
+}
