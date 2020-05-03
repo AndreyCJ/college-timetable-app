@@ -2,7 +2,6 @@
 const express = require('express');
 const mongoose = require('mongoose');
 const bodyParser = require('body-parser');
-const key = require('./config/key');
 const path = require('path');
 const AdminBro = require('admin-bro');
 const cors = require('cors');
@@ -15,7 +14,7 @@ const weekRouter = require('./routes/week.router');
 const adminRouter = require('./routes/admin.router');
 const options = require('./admin/admin.options');
 
-let MONGO_URL = key.mongoUri;
+let MONGO_URL = process.env.MONGO_URI || 'mongodb+srv://AndreyChebotar:megaru01@cluster0-gapmr.gcp.mongodb.net/app?retryWrites=true&w=majority';
 const PORT = process.env.PORT || 8080;
 
 // express server definition
