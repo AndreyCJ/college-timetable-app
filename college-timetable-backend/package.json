@@ -5,11 +5,9 @@
   "main": "index.js",
   "scripts": {
     "test": "jest",
-    "installClient": "npm start --prefix ../college-timetable-frontend",
     "start": "node index.js",
     "dev": "nodemon indexs.js",
-    "lint": "eslint",
-    "heroku-postbuild": "NPM_CONFIG_PRODUCTION=false npm install --prefix ../college-timetable-frontend && npm run build --prefix ../college-timetable-frontend"
+    "lint": "eslint"
   },
   "author": "Andrey Chebotar <andreyoneup@gmail.com>",
   "license": "ISC",

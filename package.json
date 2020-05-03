@@ -18,7 +18,7 @@
   },
   "scripts": {
     "start": "cd college-timetable-backend && node index.js",
-    "heroku-postbuild": "NPM_CONFIG_PRODUCTION=false npm install npm && run build",
+    "heroku-postbuild": "NPM_CONFIG_PRODUCTION=false npm install && npm run build",
     "dev": "concurrently \"cd college-timetable-backend && npm run dev\" \"npm startDev\" ",
     "startDev": "react-scripts start",
     "build": "react-scripts build",
