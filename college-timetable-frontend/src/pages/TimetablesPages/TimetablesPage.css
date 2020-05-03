@@ -1,0 +1,219 @@
+.timetables-page table {
+    border-collapse: collapse;
+    letter-spacing: 1px;
+    font-size: 0.8rem;
+    width: 100%;
+    height: 100%;  
+    /* max-height: 100%; */
+    table-layout: fixed;
+    flex: 1;
+    align-self: stretch;
+}
+
+.timetables-page td, .timetables-page th {
+    padding: 10px;
+    border-top: none ;
+    border: 1px solid #d8d8d8;
+    letter-spacing: 0.5px !important;
+}
+
+.timetables-page th {
+    border-top: none;
+    height: 30px;
+    padding: 0;
+    background: #F8F8F8;
+    font-weight: 300;   
+}
+
+.timetables-page td {
+    text-align: center;
+}
+
+.timetables-page {
+    height: 100%;
+}
+
+.timetables-page__wrapper {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    height: 100%;
+    max-height: 100%;
+    overflow-y: hidden;
+}
+
+.number {
+    padding: 0 !important;
+    margin: 0;
+    width: 20px;
+    background: #F8F8F8;
+    font-weight: 400;
+}
+
+.fake-col-num {
+    width: 30px;
+    background: #f8f8f8;
+    /* display: none; */
+}
+
+.fake-col {
+    z-index: -1;
+    border-bottom: none !important;
+    /* display: none; */
+}
+
+.fake-row {
+    /* border: none; */
+    height: 100% !important;
+    /* display: none; */
+    overflow: hidden;
+}
+
+.timetables-page__lesson {
+    padding: 0;
+    width: 100%;
+    height: auto;
+    /* min-height: calc(20vh - 95px);  */
+    /* height: 100%; */
+    /* min-height: 400px; */
+    background: rgba(225, 235, 250, 0.208);
+    text-align: center;
+    border-radius: .5em;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    color: #333333;
+    position: relative;
+    border: 1px solid rgba(214, 214, 214, 0.555);
+
+    /* -moz-box-shadow:    1px 1px 2px 2px rgba(0, 0, 0, 0.01);
+    -webkit-box-shadow: 1px 1px 2px 2px rgba(0, 0, 0, 0.02);
+     box-shadow:        1px 1px 2px 2px rgba(0, 0, 0, 0.03); */
+}
+
+.timetables-page__lesson-wrapper {
+  line-height: 1.7;
+  position: relative;
+}
+
+.loading-wrapper {
+  align-items: center;
+  justify-content: center;
+}
+
+.timetables-page__lesson:hover {
+  background: rgb(225, 235, 250);
+}
+
+
+.timetables-page__lesson div {
+  padding: 5px 10px;
+  width: 100%;
+}
+
+.timetables-page__lesson .className {
+  font-weight: 600;
+  padding-bottom: 5px;
+  margin-bottom: 5px;
+  font-size: 0.9rem;
+}
+
+.timetables-page__lesson .classTime::before {
+  content: '';
+  width: 50px;
+  height: 1px;
+  background: rgb(214, 214, 214);
+  position: absolute; 
+  top: 0;
+  left: calc(50% - 25px);
+}
+
+.timetables-page__lesson .classTime {
+  position: relative;
+  /* border-top: 1px solid rgba(214, 214, 214, 0.555);   */
+  min-width: 100%;
+  margin-top: 5px;
+  padding-top: 5px;
+}
+
+.timetables-page__lesson .classTime svg {
+  font-size: 0.7rem;
+  color: rgba(0, 0, 0, 0.459);
+  margin-right: 5px;
+}
+
+.blank-timetable {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex: 1;
+}
+
+.blank-timetable span {
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: #555555;
+}
+
+@media (max-width: 1250px) {
+  .timetables-page__lesson .className {
+    font-size: 0.8rem;
+    overflow-wrap: break-word;
+  }
+}
+
+@media (max-width: 900px) {
+  .timetables-page__lesson .className, .timetables-page__lesson .classTime{
+    font-size: 0.7rem;
+  }
+}
+
+@media (max-width: 768px) {
+    .timetables-page table {
+      display: block;
+      overflow-x: auto;
+      white-space: nowrap;
+      width: 100%;
+    }
+
+    .timetables-page__lesson .className {
+      font-size: 0.9rem;
+    }
+
+    .timetables-page tr {
+      height: 100%;
+    }
+
+    .timetables-page tr td:nth-child(2) {
+      min-width: calc(100vw - 20px) !important;
+    }
+
+    .timetables-page__lesson-wrapper {
+      word-wrap: break-word;
+      white-space: normal;
+      height: 100%;
+      min-width: 100vw;
+    }
+
+    .timetables-page__lesson {
+      /* word-wrap: break-word; */
+      overflow-wrap: break-word;
+    }
+
+    .number {
+      min-width: 20px !important;
+      font-size: 0.7rem
+    }
+
+    .fake-row {
+      display: none;
+    }
+}
+
+@media (max-width: 425px) {
+  .timetables-page__lesson .className {
+    font-size: 0.8rem;
+  }
+}

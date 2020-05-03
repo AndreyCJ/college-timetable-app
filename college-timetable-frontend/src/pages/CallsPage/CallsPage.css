@@ -1,0 +1,222 @@
+.callsPage-wrapper {
+  display: flex;
+  padding-top: 3rem;
+  /* justify-content: center; */
+  align-items: center;
+  flex: 1;
+  flex-direction: column;
+  /* margin-top: -55px; */
+  color: #333333;
+}
+
+.callsPage__callsTimetable-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  padding: 15px;
+  width: 100%;
+  max-width: 900px;
+}
+
+.callsPage__callsTimetable-shiftNum {
+  margin-bottom: 1rem;
+}
+
+.callsPage__callsTimetable__item {
+  width: 100%;
+  max-width: 100%;
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  margin: 0 20px;
+  flex-wrap: wrap;
+  padding-bottom: 1rem;
+}
+
+/* .callsPage__callsTimetable__item ul{
+  list-style: none;
+}
+
+.callsPage__callsTimetable-table {
+  font-size: 1.2rem;
+  display: flex;
+  width: 100%;
+  flex: 1;
+  justify-content: space-between;
+
+}
+
+.callsPage__callsTimetable-table-call {
+  display: flex;
+  
+}
+
+.callsPage__callsTimetable-table-call__item {
+  white-space: nowrap;
+  
+} */
+
+.callsPage__callsTimetable-table-call__time {
+  letter-spacing: 2px;
+}
+
+.callsPage__callsTimetable-table {
+  border-collapse: collapse;
+  table-layout: fixed;
+  font-size: 1rem;
+}
+
+.callsPage__callsTimetable-table td{
+  border: 1px solid #d8d8d8;
+  background: #fff;
+  letter-spacing: 0.5px !important;
+  padding: 10px 20px;
+  white-space: nowrap;
+}
+
+.callsPage__callsTimetable-table-call__class {
+  padding-right: 40px !important;
+  width: 100%;
+}
+
+.callsPage__callsTimetable__info {
+  max-width: 900px;
+  padding: 0 20px;
+  display: block;
+  width: 100%;
+  margin-bottom: 2rem;
+}
+
+.callsPage__callsTimetable__info-day {
+  margin-bottom: 4rem;
+  font-size: 2rem;
+  text-align: center;
+  position: relative;
+  /* background: rgba(225, 235, 250, 0.208);
+  color: #333333;
+  padding: 1rem;
+  
+  border-radius: .5rem;
+  border: 1px solid #d8d8d8a1; */
+}
+
+.callsPage__callsTimetable__info-day::after {
+  content: '';
+  display: block;
+  height: 4px;
+  width: 100px;
+  left: calc(50% - 50px);
+  bottom: -1.2rem;
+
+  background: #F7C942;
+  position: absolute;
+}
+
+.callsPage__callsTimetable__info-date {
+  margin-bottom: 10px;
+}
+
+.callsPage__callsTimetable__info-credentialsWrapper div {
+  position: relative;
+  padding-left: 1rem;
+}
+
+.callsPage__callsTimetable__info-credentialsWrapper div::before {
+  content: '';
+  display: block;
+  width: 4px;
+  background: #F7C942;
+  height: 100%;
+  left: 0;
+  position: absolute;
+}
+
+.callsPage__callsTimetable__info-expireDate {
+  font-size: 1.1rem;
+}
+
+.callsPage-loading-wrapper {
+  justify-content: center;
+  align-items: center;
+  flex: 1;
+  margin-top: -31px;
+}
+
+@media (max-width: 650px) {
+  .callsPage__callsTimetable__item {
+    padding-bottom: 2rem;
+  }
+
+  .callsPage__callsTimetable__item:last-child {
+    padding-bottom: 0rem;
+  }
+
+  .callsPage__callsTimetable__info {
+    width: 100%;
+  }
+
+  .callsPage__callsTimetable__info-day {
+    font-size: 1.4rem;
+  }
+
+  .callsPage__callsTimetable__info-credentialsWrapper div{
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 425px) {
+  .callsPage-wrapper {
+    justify-content: flex-start;
+    padding-top: 1rem;
+  }
+
+  .callsPage__callsTimetable-table {
+    font-size: 0.9rem;
+  }
+
+  .callsPage__callsTimetable-table td{
+    padding: 10px;
+  }
+
+  .callsPage__callsTimetable__item {
+    margin: 0px;
+  }
+
+  .callsPage__callsTimetable__info {
+    padding: 0px;
+  }
+
+  .callsPage__callsTimetable__info-day {
+    font-size: 1rem;
+  }
+
+  .callsPage__callsTimetable-shiftNum {
+    font-size: 1.1rem;
+  }
+}
+
+@media (max-width: 320px) {
+  .callsPage-wrapper {
+    padding-top: 0px;
+  }
+
+  .callsPage__callsTimetable__info {
+    padding-top: 1rem;
+  }
+
+  .callsPage__callsTimetable-shiftNum {
+    font-size: 1.2rem;
+  }
+
+  .callsPage__callsTimetable-table {
+    font-size: 0.9rem;
+  }
+
+  .callsPage__callsTimetable__info-day {
+    font-size: 1.1rem;
+  }
+
+  .callsPage__callsTimetable-table-call__class {
+    padding-right: 20px !important;
+  }
+}
