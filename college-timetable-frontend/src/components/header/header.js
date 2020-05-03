@@ -1,6 +1,4 @@
 import React, { useState, useEffect } from 'react';
-// import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-// import { faSearch } from "@fortawesome/free-solid-svg-icons";
 
 import './header.css';
 import Groups from '../groups/Groups';
@@ -31,10 +29,10 @@ const Header = (props) => {
       }
     );
   };
-  
+
   useEffect(() => {
     setCurrentGroup(localStorage.getItem('currentGroup'));
-    const getGroups = async () => {
+    const fetchGroups = async () => {
       const response = await fetch('/api/classTimetable/groups');
       const data = await response.json();
       const distinctGroups = [...new Set(data.map(group => group.group ))];
@@ -43,15 +41,21 @@ const Header = (props) => {
       setAllGroups(copy);
     };
 
-    const getWeek = async () => {
-      const response = await fetch('/api/week');
-      const data = await response.json();
-      setWeek(data);
-      console.log(data);
+    const getWeek = () => {
+      let date = new Date();
+      date.setHours(0, 0, 0, 0);
+      // Thursday in current week decides the year.
+      date.setDate(date.getDate() + 3 - (date.getDay() + 6) % 7);
+      // January 4 is always in week 1.
+      let week1 = new Date(date.getFullYear(), 0, 4);
+      // Adjust to Thursday in week 1 and count number of weeks from date to week1.
+      return 1 + Math.round(((date.getTime() - week1.getTime()) / 86400000 - 3 + (week1.getDay() + 6) % 7) / 7);
     };
 
-    getGroups();
-    getWeek();
+    const theWeek =  getWeek() % 2 === 0 ? 'Четная' : 'Нечетная';
+    setWeek(theWeek);
+
+    fetchGroups();
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
@@ -79,10 +83,11 @@ const Header = (props) => {
           </div>
         
       </div>
-      <div className="mobileMenu-wrapper">
-          <MobileMenuToggleBtn click={handleMenuBtnClick}/>
-          <MobileMenu show={menuState.isMenuOpen} weeks={<Weeks />} groups={<Groups />} />
-          <Backdrop click={handleBackdropClick} show={menuState.isMenuOpen} />
+        <div className="mobileMenu-wrapper">
+            {localStorage.getItem('currentGroup') !== null &&
+            <MobileMenuToggleBtn click={handleMenuBtnClick}/>}
+            <MobileMenu show={menuState.isMenuOpen} weeks={<Weeks />} groups={<Groups />} />
+            <Backdrop click={handleBackdropClick} show={menuState.isMenuOpen} />
         </div>
     </header>
   );

@@ -14,7 +14,7 @@ const weekRouter = require('./routes/week.router');
 const adminRouter = require('./routes/admin.router');
 const options = require('./admin/admin.options');
 
-let MONGO_URL = process.env.MONGO_URI || 'mongodb+srv://AndreyChebotar:megaru01@cluster0-gapmr.gcp.mongodb.net/app?retryWrites=true&w=majority';
+const MONGO_URL = process.env.MONGO_URI || 'mongodb+srv://AndreyChebotar:megaru01@cluster0-gapmr.gcp.mongodb.net/app?retryWrites=true&w=majority';
 const PORT = process.env.PORT || 8080;
 
 // express server definition
@@ -28,15 +28,20 @@ app.use(classTimetable);
 app.use(callsTimetable);
 app.use(calls);
 app.use(weekRouter);
-// app.use('/timetable-admin', adminRouter);
 
 // Serve static assets if production
 if (process.env.NODE_ENV === 'production') {
 // Set static folder
-  app.use(express.static('../build'));
+  app.use(express.static('../college-timetable-frontend/build'));
 
-  app.get('*', (req, res) => {
-    res.sendFile(path.resolve(__dirname, '../', 'build', 'index.html'));
+  app.get('/', (req, res) => {
+    res.sendFile(path.resolve(__dirname, '../college-timetable-frontend', 'build', 'index.html'));
+  });
+  app.get('/class-timetable', (req, res) => {
+    res.sendFile(path.resolve(__dirname, '../college-timetable-frontend', 'build', 'index.html'));
+  });
+  app.get('/calls', (req, res) => {
+    res.sendFile(path.resolve(__dirname, '../college-timetable-frontend', 'build', 'index.html'));
   });
 }
 

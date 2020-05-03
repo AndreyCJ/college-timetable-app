@@ -3,11 +3,11 @@
   "version": "1.0.0",
   "description": "MERN app",
   "scripts": {
-    "start": "node college-timetable-backend/index.js",
+    "start": "cd college-timetable-backend && npm install && node index.js",
     "backend": "nodemon college-timetable-backend/index.js",
     "frontend": "npm run start --prefix college-timetable-frontend",
     "dev": "concurrently \"npm run backend\" \"npm run start --prefix college-timetable-frontend\" ",
-    "heroku-postbuild": "NPM_CONFIG_PRODUCTION=false npm install --prefix college-timetable-frontend && npm run build --prefix college-timetable-frontend"
+    "heroku-postbuild": "cd college-timetable-frontend && npm install && npm run build"
   },
   "author": "Andrey Chebotar <andreyoneup@gmail.com>",
   "license": "ISC",

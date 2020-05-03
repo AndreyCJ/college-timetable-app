@@ -11,28 +11,28 @@ const ADMIN = {
 };
 
 /**
- * 
- * @param {AdminBro} admin 
+ *
+ * @param {AdminBro} admin
  * @return {express.Router} router
  */
 const BuildAdminRouter = (admin) => {
   const router = buildAuthenticatedRouter(
     admin,
-      {
-        cookieName: process.env.ADMIN_COOKIE_NAME || 'admin-bro',
-        cookiePassword: process.env.ADMIN_COOKIE_PASS || PASS,
-        authenticate: async (email, password) => {
-          if (email === ADMIN.email && password === ADMIN.password) {
-            return ADMIN;
-          }
-          return null;
-        },
+    {
+      cookieName: process.env.ADMIN_COOKIE_NAME || 'admin-bro',
+      cookiePassword: process.env.ADMIN_COOKIE_PASS || PASS,
+      authenticate: async (email, password) => {
+        if (email === ADMIN.email && password === ADMIN.password) {
+          return ADMIN;
+        }
+        return null;
       },
-      null,
-      {
-        resave: true,
-        saveUninitialized: true,
-      },
+    },
+    null,
+    {
+      resave: true,
+      saveUninitialized: true,
+    },
   );
   return router;
 };

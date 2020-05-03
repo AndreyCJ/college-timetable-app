@@ -8,11 +8,8 @@ AdminBro.registerAdapter(AdminBroMongoose);
 const options = {
   databases: [mongoose],
   branding: {
-    companyName: 'Расписание колледжа'
+    companyName: 'Расписание колледжа',
   },
-  rootPath: '/timetable-admin',
-  logoutPath: '/timetable-admin/exit',
-  loginPath: '/timetable-admin/sign-in',
-}
+};
 
 module.exports = options;
