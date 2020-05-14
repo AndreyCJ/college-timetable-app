@@ -8,8 +8,6 @@
     flex-direction: column;
     min-height: calc(100vh - 55px);
     max-width: 55px;
-    -webkit-transition: max-width .3s ease-out;
-    transition: max-width .3s ease-out;
     overflow: hidden;
     width: 100%;
 }
@@ -108,8 +106,8 @@
 
 .sidebar.--sidebar-open {
   max-width: 250px;
-  -webkit-transition: max-width .3s ease-in;
-  transition: max-width .3s ease-in;
+  /* -webkit-transition: max-width .3s ease-in;
+  transition: max-width .3s ease-in; */
 }
 
 .sidebar-pages__item a {

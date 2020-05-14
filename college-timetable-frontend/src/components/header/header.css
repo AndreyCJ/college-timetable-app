@@ -9,7 +9,6 @@
     box-shadow: 0 1px 3px rgba(0,0,0,.1);
 }
 
-
 .header-wrapper {
     width: 100%;
     /* padding-left: 30px; */
@@ -45,7 +44,7 @@
 }
 
 .header .select-wrapper ul {
-    /* width: 100%; */
+    width: 100%;
     list-style: none;
     position: absolute;
     top: 55px;

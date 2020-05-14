@@ -77,7 +77,7 @@ const ClassTimetable = (props) => {
                 <td className="timetables-page__lesson-wrapper" key={i+10}>
                   <div className="timetables-page__lesson">
                     <div>
-                      <div className="className">{lesson[0]}</div>
+                      <div className="lesson-text">{lesson[0]}</div>
                       {
                         typeof(lesson[1]) !== 'undefined' &&
                         <div className="classTime"><FontAwesomeIcon icon={faBell}/>{lesson[1]}, каб. №{lesson[2]}</div>
