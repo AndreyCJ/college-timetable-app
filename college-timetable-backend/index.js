@@ -9,6 +9,7 @@ const cors = require('cors');
 
 const classTimetable = require('./routes/classTimetable.router');
 const callsTimetable = require('./routes/callsTimetable.router');
+const groupsRouter = require('./routes/groups.router');
 const calls = require('./routes/calls.router');
 const weekRouter = require('./routes/week.router');
 const adminRouter = require('./routes/admin.router');
@@ -28,6 +29,7 @@ app.use(classTimetable);
 app.use(callsTimetable);
 app.use(calls);
 app.use(weekRouter);
+app.use(groupsRouter);
 
 // Serve static assets if production
 if (process.env.NODE_ENV === 'production') {

@@ -26,7 +26,7 @@ const ClassTimetable = (props) => {
       const data = await response.json();
       const copy = [...data]
       setData({ classes: copy, isFetching: false });
-      // console.log(data);
+      console.log(data);
     } catch (err) {
       console.log(err);
     }
@@ -87,7 +87,7 @@ const ClassTimetable = (props) => {
                 </td>
               );
             } else {
-              return <td className="timetables-page__lesson-wrapper" key={i+10}></td>
+              return <td className="timetables-page__lesson-wrapper" key={i+100}></td>
             }
           })}
         </tr>

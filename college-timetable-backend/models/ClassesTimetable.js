@@ -1,13 +1,28 @@
 const { Schema, model } = require('mongoose');
 
 const ClassesTimetable = new Schema({
-  className: String,
-  classNum: Number,
+  className: {
+    type: String,
+    required: true
+  },
+  classNum: {
+    type: Number,
+    required: true
+  },
   classTime: String,
   room: String,
-  group: String,
-  day: String,
-  week: String,
+  group: [{
+    type: Schema.Types.ObjectId,
+    ref: 'Groups'
+  }],
+  day: {
+    type: String,
+    required: true
+  },
+  week: {
+    type: String, 
+    required: true
+  }
 });
 
 module.exports = model('ClassesTimetable', ClassesTimetable);

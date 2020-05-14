@@ -33,12 +33,12 @@ const Header = (props) => {
   useEffect(() => {
     setCurrentGroup(localStorage.getItem('currentGroup'));
     const fetchGroups = async () => {
-      const response = await fetch('/api/classTimetable/groups');
+      const response = await fetch('/api/groups');
       const data = await response.json();
-      const distinctGroups = [...new Set(data.map(group => group.group ))];
-      const copy = [...distinctGroups];
-      console.log(data);
-      setAllGroups(copy);
+      const copy = [...data];
+      const groups = copy.map(e => e.groupName);
+      // console.log(groups);
+      setAllGroups(groups);
     };
 
     const getWeek = () => {
