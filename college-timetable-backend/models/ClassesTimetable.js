@@ -11,13 +11,13 @@ const ClassesTimetable = new Schema({
   },
   classTime: String,
   room: String,
-  group: [{
-    type: Schema.Types.ObjectId,
-    ref: 'Groups'
-  }],
   day: {
     type: String,
     required: true
+  },
+  group: {
+    type: Schema.Types.ObjectId,
+    ref: 'Groups'
   },
   week: {
     type: String, 

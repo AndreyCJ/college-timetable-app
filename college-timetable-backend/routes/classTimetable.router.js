@@ -17,9 +17,13 @@ router.get('/api/classTimetable/:week&:group', async (req, res) => {
     const classes = await ClassesTimetable.find({}).populate('group');
     const sortedByWeekAndGroup = [];
     classes.forEach((lesson) => {
-      const groups = lesson.group.map(e => e.groupName === req.params.group && e);
-      const sortedGroups = groups.filter(e => e !== false);
-      if (lesson.week === req.params.week && sortedGroups.length > 0) {
+      // ********** 
+      // // For multiple groups in 1 lesson 
+      // const groups = lesson.group.map(e => e.groupName === req.params.group && e);
+      // const sortedGroups = groups.filter(e => e !== false);
+      // if (lesson.week === req.params.week && sortedGroups.length > 0) {
+      // ********** 
+      if (lesson.week === req.params.week && lesson.group.groupName === req.params.group) {
         sortedByWeekAndGroup.push(lesson);
       }
     });

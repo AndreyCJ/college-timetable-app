@@ -17,12 +17,12 @@ const PageContainer = (props) => {
     },
     {
       component: TimetablesPage,
-      title: 'Расписание уроков',
+      title: 'Расписание занятий',
       path: '/class-timetable'
     },
     {
       component: CallsPage,
-      title: 'Расписание звоноков',
+      title: 'Расписание звонков',
       path: '/calls'
     }
   ]);

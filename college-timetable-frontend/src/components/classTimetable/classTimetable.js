@@ -24,6 +24,7 @@ const ClassTimetable = (props) => {
       setData({ isFetching: true });
       const response = await fetch(`/api/classTimetable/${theWeek}&${theGroup}`);
       const data = await response.json();
+      // console.log(data)
       const copy = [...data]
       setData({ classes: copy, isFetching: false });
       console.log(data);
