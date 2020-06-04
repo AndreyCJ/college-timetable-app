@@ -48,8 +48,7 @@
       "type": "image/png"
     }
   ],
-  "start_url": "/",
-  "scope": "/",
+  "start_url": ".",
   "display": "standalone",
   "theme_color": "#F7C942",
   "background_color": "#F7C942"
