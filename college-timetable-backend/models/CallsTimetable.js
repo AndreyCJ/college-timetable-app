@@ -4,7 +4,7 @@ const CallsTimetableSchema = new Schema({
   shiftNum: String,
   CallsArr: [{
     type: Schema.Types.ObjectId,
-    ref: 'Calls'
+    ref: 'Звонки'
   }],
 });
 
@@ -14,8 +14,8 @@ const CallsInfoSchema = new Schema({
   infoExpireDate: String,
 });
 
-const CallsTimetable = model('CallsTimetable', CallsTimetableSchema);
-const CallsInfo = model('CallsInfo', CallsInfoSchema);
+const CallsTimetable = model('Расписание звонков', CallsTimetableSchema);
+const CallsInfo = model('ДопИнфРасписанияЗвонков', CallsInfoSchema);
 
 
 module.exports = {

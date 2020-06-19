@@ -5,7 +5,7 @@ import useGroupContext from '../../hooks/useGroupContext';
 import useWeekContext from '../../hooks/useWeekContext';
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faBell } from '@fortawesome/free-solid-svg-icons';
+import { faBell, faChalkboardTeacher } from '@fortawesome/free-solid-svg-icons';
 
 const ClassTimetable = (props) => {
   const [data, setData] = useState({ classes: [], isFetching: true });
@@ -44,19 +44,19 @@ const ClassTimetable = (props) => {
 
     classes.map(classData => {
       if (classData.day === 'Понедельник'){
-        monday[classData.classNum - 1] = [classData.className, classData.classTime, classData.room];
+        monday[classData.classNum - 1] = [classData.className, classData.classTime, classData.room, classData.teacher];
       } 
       else if (classData.day === 'Вторник') {
-        tuesday[classData.classNum - 1] = [classData.className, classData.classTime, classData.room];
+        tuesday[classData.classNum - 1] = [classData.className, classData.classTime, classData.room, classData.teacher];
       }
       else if (classData.day === 'Среда') {
-        wednesday[classData.classNum - 1] = [classData.className, classData.classTime, classData.room];
+        wednesday[classData.classNum - 1] = [classData.className, classData.classTime, classData.room, classData.teacher];
       }
       else if (classData.day === 'Четверг') {
-        thursday[classData.classNum - 1] = [classData.className, classData.classTime, classData.room];
+        thursday[classData.classNum - 1] = [classData.className, classData.classTime, classData.room, classData.teacher];
       }
       else if (classData.day === 'Пятница') {
-        friday[classData.classNum - 1] = [classData.className, classData.classTime, classData.room];
+        friday[classData.classNum - 1] = [classData.className, classData.classTime, classData.room, classData.teacher];
       }
       return true;
     });
@@ -79,10 +79,13 @@ const ClassTimetable = (props) => {
                   <div className="timetables-page__lesson">
                     <div>
                       <div className="lesson-text">{lesson[0]}</div>
-                      {
-                        typeof(lesson[1]) !== 'undefined' &&
-                        <div className="classTime"><FontAwesomeIcon icon={faBell}/>{lesson[1]}, каб. №{lesson[2]}</div>
-                      }
+                      <div className="lesson-additional">
+                        <div className="lesson-teacher"><FontAwesomeIcon icon={faChalkboardTeacher}/>{lesson[3]}</div>
+                        {
+                          typeof(lesson[1]) !== 'undefined' &&
+                          <div className="classTime"><FontAwesomeIcon icon={faBell}/>{lesson[1]}, каб. №{lesson[2]}</div>
+                        }
+                      </div>
                     </div>
                   </div>
                 </td>

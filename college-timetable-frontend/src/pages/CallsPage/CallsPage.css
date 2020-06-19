@@ -1,6 +1,5 @@
 .callsPage-wrapper {
   display: flex;
-  padding-top: 3rem;
   /* justify-content: center; */
   align-items: center;
   flex: 1;
@@ -16,6 +15,7 @@
   padding: 15px;
   width: 100%;
   max-width: 900px;
+  padding-top: 4rem;
 }
 
 .callsPage__callsTimetable-shiftNum {
@@ -80,6 +80,7 @@
 }
 
 .callsPage__callsTimetable__info {
+  padding-top: 3rem;
   max-width: 900px;
   padding: 0 20px;
   display: block;

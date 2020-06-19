@@ -5,6 +5,10 @@ const ClassesTimetable = new Schema({
     type: String,
     required: true
   },
+  teacher: {
+    type: String,
+    required: true
+  },
   classNum: {
     type: Number,
     required: true
@@ -17,7 +21,7 @@ const ClassesTimetable = new Schema({
   },
   group: {
     type: Schema.Types.ObjectId,
-    ref: 'Groups'
+    ref: 'Группы'
   },
   week: {
     type: String, 
@@ -25,4 +29,4 @@ const ClassesTimetable = new Schema({
   }
 });
 
-module.exports = model('ClassesTimetable', ClassesTimetable);
+module.exports = model('Расписание занятий', ClassesTimetable);

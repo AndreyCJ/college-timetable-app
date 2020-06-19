@@ -4,4 +4,4 @@ const Groups = new Schema({
   groupName: String,
 });
 
-module.exports = model('Groups', Groups);
+module.exports = model('Группы', Groups);

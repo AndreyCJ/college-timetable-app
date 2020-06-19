@@ -116,9 +116,19 @@
   padding-bottom: 5px;
   margin-bottom: 5px;
   color: #555555 !important;
+  font-size: 0.9rem;
+  letter-spacing: normal !important;
 }
 
-.timetables-page__lesson .classTime::before {
+.lesson-additional {
+  position: relative;
+  /* border-top: 1px solid rgba(214, 214, 214, 0.555);   */
+  min-width: 100%;
+  margin-top: 5px;
+  padding-top: 5px;
+}
+
+.lesson-additional::before {
   content: '';
   width: 50px;
   height: 1px;
@@ -128,34 +138,31 @@
   left: calc(50% - 25px);
 }
 
+/* .timetables-page__lesson .classTime::before {
+  content: '';
+  width: 50px;
+  height: 1px;
+  background: rgb(214, 214, 214);
+  position: absolute; 
+  top: 0;
+  left: calc(50% - 25px);
+} */
+
 .timetables-page__lesson .classTime {
-  position: relative;
+  /* position: relative; */
   /* border-top: 1px solid rgba(214, 214, 214, 0.555);   */
   min-width: 100%;
-  margin-top: 5px;
-  padding-top: 5px;
+  /* margin-top: 5px;
+  padding-top: 5px; */
 }
 
-.timetables-page__lesson .classTime svg {
+.lesson-additional svg {
   font-size: 0.7rem;
   color: rgba(0, 0, 0, 0.459);
   margin-right: 5px;
 }
 
-.blank-timetable {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex: 1;
-}
-
-.blank-timetable span {
-  font-size: 1.2rem;
-  font-weight: 600;
-  color: #555555;
-}
-
-@media (max-width: 1250px) {
+@media (max-width: 1550px) {
   .lesson-text {
     font-size: 0.8rem;
     overflow-wrap: break-word;

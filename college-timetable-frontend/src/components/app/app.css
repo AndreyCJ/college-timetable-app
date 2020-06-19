@@ -116,6 +116,19 @@ s-roller div:nth-child(3) {
   left: 12px;
 }
 
+.blank-timetable {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex: 1;
+}
+
+.blank-timetable span {
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: #555555;
+}
+
 @keyframes lds-roller {
   0% {
     transform: rotate(0deg);
