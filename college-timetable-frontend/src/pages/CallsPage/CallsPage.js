@@ -49,22 +49,22 @@ const CallsPage = () => {
       (
         <div className="callsPage__callsTimetable__info">
           {
-            data.callsInfo[0].infoDay === undefined || data.callsInfo[0].infoDay === '-' ?
+            data.callsInfo[0].infoDay === undefined || data.callsInfo[0].infoDay === '-' || data.callsInfo[0].infoDay === '' ?
             <div className="callsPage__callsTimetable__info-day"><h1>Расписание</h1></div> : 
             <div className="callsPage__callsTimetable__info-day"><h1>{data.callsInfo[0].infoDay}</h1></div>
           }
           {
-          data.callsInfo[0].infoDate && data.callsInfo[0].infoExpireDate === undefined ? null :
-          <div className="callsPage__callsTimetable__info-credentialsWrapper">
-            {
-              data.callsInfo[0].infoDate === undefined ? null :
-              <div className="callsPage__callsTimetable__info-date"><span>{data.callsInfo[0].infoDate}</span></div>
-            }
-            {
-              data.callsInfo[0].infoExpireDate === undefined ? null :
-              <div className="callsPage__callsTimetable__info-expireDate"><span>{data.callsInfo[0].infoExpireDate}</span></div>
-            }
-          </div>
+            data.callsInfo[0].infoDate === undefined && data.callsInfo[0].infoExpireDate === undefined ? null :
+            <div className="callsPage__callsTimetable__info-credentialsWrapper">
+              {
+                data.callsInfo[0].infoDate === undefined ? null :
+                <div className="callsPage__callsTimetable__info-date"><span>{data.callsInfo[0].infoDate}</span></div>
+              }
+              {
+                data.callsInfo[0].infoExpireDate === undefined ? null :
+                <div className="callsPage__callsTimetable__info-expireDate"><span>{data.callsInfo[0].infoExpireDate}</span></div>
+              }
+            </div>
           }
         </div>
       );
