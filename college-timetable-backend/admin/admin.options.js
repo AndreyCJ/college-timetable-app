@@ -14,9 +14,17 @@ const options = {
     favicon: 'https://raw.githubusercontent.com/AndreyCJ/college-timetable-frontend/master/public/favicon.ico'
   },
   locale: {
+    language: 'ru',
     translations: {
+      labels: {
+        Calls: 'Информация о звонках',
+        Groups: 'Группы',
+        CallsTimetable: 'Расписание звонков',
+        CallsInfo: 'Дополнительная информация о расписании звонков',
+        ClassTimetable: 'Расписание занятий'
+      },
       properties: {
-        className: 'Название урока',
+        className: 'Название занятия',
         time: 'Время',
         groupName: 'Название группы',
         infoDay: 'Заголовок страницы',
@@ -27,9 +35,10 @@ const options = {
         teacher: 'Преподаватель',
         classNum: 'Номер занятия',
         classTime: 'Время занятия',
-        room: 'Кабинет',
-        day: 'День недели',
+        room: 'Номер кабинета',
+        day: 'День недели (Пн-пт)',
         group: 'Группа',
+        week: 'Четность недели (Четная/Нечетная)'
       }
     },
     

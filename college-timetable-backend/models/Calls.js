@@ -5,4 +5,4 @@ const Calls = new Schema({
   time: String
 });
 
-module.exports = model('Звонки', Calls);
+module.exports = model('Calls', Calls);

@@ -132,10 +132,6 @@
   position: absolute;
 }
 
-.callsPage__callsTimetable__info-expireDate {
-  font-size: 1.1rem;
-}
-
 .callsPage-loading-wrapper {
   justify-content: center;
   align-items: center;

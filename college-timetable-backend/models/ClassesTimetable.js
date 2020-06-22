@@ -21,7 +21,7 @@ const ClassesTimetable = new Schema({
   },
   group: {
     type: Schema.Types.ObjectId,
-    ref: 'Группы'
+    ref: 'Groups'
   },
   week: {
     type: String, 
@@ -29,4 +29,4 @@ const ClassesTimetable = new Schema({
   }
 });
 
-module.exports = model('Расписание занятий', ClassesTimetable);
+module.exports = model('ClassTimetable', ClassesTimetable);
