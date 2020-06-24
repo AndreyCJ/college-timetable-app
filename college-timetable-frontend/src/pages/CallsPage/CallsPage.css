@@ -159,6 +159,10 @@
   .callsPage__callsTimetable__info-credentialsWrapper div{
     font-size: 1rem;
   }
+
+  .callsPage__callsTimetable-wrapper {
+    padding-top: 2rem;
+  }
 }
 
 @media (max-width: 425px) {

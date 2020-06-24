@@ -25,7 +25,8 @@
 }
 
 .mobileMenu-ul .toolbar__item label{
-  font-weight: 600;
+  font-weight: 400;
+  font-size: 0.9rem;
   /* letter-spacing: .5px; */
 }
 
@@ -65,17 +66,35 @@
 
 .mobileMenu-ul .headerNavItem__mobile {
     margin-bottom: 1rem;
+
 }
 
 .mobileMenu a {
     text-decoration: none;
     color: #1B1B1C;
     font-size: 1rem;
-    font-weight: 600;
+    font-weight: 400;
 }
 
+/* .mobilelink-active {
+  color: #1B1B1C !important;
+  font-weight: 700 !important;
+} */
+
 .mobilelink-active {
-  color: rgb(75, 95, 211) !important;
+  position: relative;
+  padding-left: 15px;
+  font-weight: 600 !important;
+}
+
+.mobilelink-active::before {
+  content: '';
+  position: absolute;
+  height: 100%;
+  margin-right: 10px;
+  width: 5px;
+  background: #F7C942;
+  left: 0;
 }
 
 .mobileLogo {

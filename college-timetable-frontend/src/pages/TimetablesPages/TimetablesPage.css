@@ -8,6 +8,7 @@
     table-layout: fixed;
     flex: 1;
     align-self: stretch;
+    will-change: transform;
 }
 
 .timetables-page td, .timetables-page th {
@@ -17,9 +18,14 @@
     letter-spacing: 0.5px !important;
 }
 
+thead th {
+  font-size: 12px !important;
+  padding: 5px !important;
+}
+
 .timetables-page th {
     border-top: none;
-    height: 30px;
+    height: 20px;
     padding: 0;
     background: #F8F8F8;
     font-weight: 300;   
@@ -27,6 +33,7 @@
 
 .timetables-page td {
     text-align: center;
+    max-height: 100%;
 }
 
 .timetables-page {
@@ -166,6 +173,10 @@
   .lesson-text {
     font-size: 0.8rem;
     overflow-wrap: break-word;
+  }
+
+  .timetables-page__lesson {
+    font-size: 0.7rem;
   }
 }
 

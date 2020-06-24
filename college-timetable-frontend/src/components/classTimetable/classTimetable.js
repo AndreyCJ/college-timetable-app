@@ -82,8 +82,11 @@ const ClassTimetable = (props) => {
                       <div className="lesson-additional">
                         <div className="lesson-teacher"><FontAwesomeIcon icon={faChalkboardTeacher}/>{lesson[3]}</div>
                         {
-                          typeof(lesson[1]) !== 'undefined' &&
-                          <div className="classTime"><FontAwesomeIcon icon={faBell}/>{lesson[1]}, каб. №{lesson[2]}</div>
+                          typeof(lesson[1]) !== 'undefined' && 
+                          <div className="classTime">
+                            <FontAwesomeIcon icon={faBell}/>
+                            {lesson[1]}{lesson[2] !== '' && `, каб. №${lesson[2]}`}
+                          </div>
                         }
                       </div>
                     </div>
