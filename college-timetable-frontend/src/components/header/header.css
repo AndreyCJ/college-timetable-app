@@ -220,6 +220,7 @@
 
   .header-logo {
     box-shadow: none;
+    padding-left: 5px;
   }
 
   .mobileMenu-wrapper{
